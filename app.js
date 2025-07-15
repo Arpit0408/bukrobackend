@@ -63,5 +63,5 @@ app.use('/api/reviews', productreview); // ✅ Use review routes
 app.get("/", (req, res) => res.send("BuyKaro Backend Running"));
 
 // ✅ Start server
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
