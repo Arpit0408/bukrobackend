@@ -65,6 +65,11 @@ app.use('/api/reviews', productreview); // ✅ Use review routes
 // ✅ Default route
 app.get("/", (req, res) => res.send("BuyKaro Backend Running"));
 
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'ok', message: 'Server is healthy' });
+});
+
+
 // ✅ Start server
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
