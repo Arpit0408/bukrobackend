@@ -7,7 +7,6 @@ mongoose.connect(`${config.get("MONGODB_URI")}`)
     
 })
 .catch(function(err){
- dgbr(err);
-})
+ console.error("❌ MongoDB connection error:", err); // ✅ Proper logging})
 
 module.exports = mongoose.connection;
