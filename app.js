@@ -27,8 +27,11 @@ app.use(express.json());
 app.use(cookieParser()); // ✅ Use it before routes
 // Serve uploads folder statically
 // ✅ CORS configuration
-const allowedOrigins = ['http://localhost:3001', 'http://localhost:5173'];
-
+// const allowedOrigins = ['http://localhost:3001', 'http://localhost:5173'];
+app.use(cors({
+  origin: true,  // ye sab origins allow karega
+  credentials: true
+}));
 const corsOptions = {
   origin: function (origin, callback) {
     // origin null bhi ho sakta hai for tools like Postman or server-side calls
