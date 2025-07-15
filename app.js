@@ -15,6 +15,12 @@ const cors = require('cors');
 const cookieParser = require('cookie-parser'); // ✅ Add this
 const path = require('path');
 require('dotenv').config();
+
+
+// Now this will work
+const uri = process.env.MONGODB_URI;
+
+
 // Serve uploads folder statically (ye line add karo)
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use(express.json());
