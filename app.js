@@ -27,7 +27,7 @@ app.use(express.json());
 app.use(cookieParser()); // ✅ Use it before routes
 // Serve uploads folder statically
 // ✅ CORS configuration
-const allowedOrigins = ['http://localhost:3001', 'http://localhost:5173'];
+const allowedOrigins = ['https://buykroadmins.vercel.app', 'https://buykrofrontend.vercel.app'];
 // app.use(cors({
 //   origin: true,  // ye sab origins allow karega
 //   credentials: true
